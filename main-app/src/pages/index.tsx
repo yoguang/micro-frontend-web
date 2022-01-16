@@ -2,13 +2,12 @@ import { useEffect } from 'react';
 import { Input } from 'antd';
 import { useModel } from 'umi';
 import styles from './index.less';
-
+import { useQiankunStateForSlave } from '@/app';
 export default function IndexPage() {
-  const { globalState } = useModel('@@qiankunStateFromMaster') || {};
-
+  const { globalState, setQiankunGlobalState } = useQiankunStateForSlave();
   const handleChange = (e: any) => {
     const _value = e.target.value;
-    // setQiankunGlobalState({ data: _value });
+    setQiankunGlobalState({ data: _value });
   }
 
   console.log('globalState---->', globalState);

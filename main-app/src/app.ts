@@ -5,6 +5,7 @@ export function useQiankunStateForSlave() {
 
   useEffect(() => {
     setTimeout(() => {
+      // 获取用户信息等公共接口数据
       setQiankunGlobalState({ data: '异步数据' });
     }, 1000);
   }, []);

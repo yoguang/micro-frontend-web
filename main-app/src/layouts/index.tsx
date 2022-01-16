@@ -26,6 +26,7 @@ export default ({ children }: { children: JSX.Element }) => {
       <Content style={{ padding: '0 50px' }}>
         <Breadcrumb style={{ margin: '16px 0' }}>
           <Breadcrumb.Item>Home</Breadcrumb.Item>
+          <Breadcrumb.Item>应用</Breadcrumb.Item>
         </Breadcrumb>
         <div className="site-layout-content">{children}</div>
       </Content>
